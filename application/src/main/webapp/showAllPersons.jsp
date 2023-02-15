@@ -5,10 +5,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Insert title here</title>
+    <title>展示用户列表</title>
 </head>
 <body>
-
+<h1>展示用户列表</h1>
 <jsp:useBean id="storage" class="com.mflyyou.service.StorageService" scope="application"/>
 <%
     for (Person person : storage.getAllPersons()) {
@@ -16,7 +16,7 @@
     }
 %>
 <p>
-    <a href="addPerson.jsp">Add another person</a>
+    <a href="register.jsp">Add another person</a>
 </p>
 
 </body>

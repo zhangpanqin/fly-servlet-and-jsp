@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serial;
 import java.util.Map;
+import java.util.Optional;
 
 @WebServlet(name = "myServletCorsDemo", urlPatterns = {"/web/cors"})
 public class CorsServlet extends HttpServlet {
@@ -24,7 +25,7 @@ public class CorsServlet extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        String name = request.getParameter("name1");
-        out.print(JSON.toJSONString(Map.of("name1", "测试", "name", name)));
+        String name = Optional.ofNullable(request.getParameter("name1")).orElse("默认name1");
+        out.print(JSON.toJSONString(Map.of("name", "测试", "name1", name,"type","cors")));
     }
 }

@@ -5,10 +5,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Insert title here</title>
+    <title>注册用户</title>
 </head>
 <body>
-
+<h1>注册用户</h1>
 <form action="addPerson.jsp">
     First name :<input type="text" name="firstName" value="${UUID.randomUUID().toString()}"/><br/>
     Year of birth :<input type="text" name="yob" value="1"/><br/>

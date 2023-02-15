@@ -14,8 +14,8 @@ import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "myServletDemo", urlPatterns = {"/web/demo2"})
-public class CallbackServlet extends HttpServlet {
+@WebServlet(name = "jsonpServlet", urlPatterns = {"/web/jsonp"})
+public class JsonpServlet extends HttpServlet {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -30,10 +30,10 @@ public class CallbackServlet extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        String name = request.getParameter("name1");
         String callback = request.getParameter("callback");
-        Map ret = new HashMap();
+        Map<String, String> ret = new HashMap<>();
         ret.put("name", "测试");
+        ret.put("type", "jsonp");
         String s = JSON.toJSONString(ret);
         s = callback + "(" + s + ")";
         out.print(s);

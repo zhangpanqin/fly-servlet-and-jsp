@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Insert title here</title>
+    <title>用户注册成功，用户信息</title>
 </head>
 <body>
 <jsp:useBean id="person" class="com.mflyyou.service.Person"/>
@@ -14,7 +14,7 @@
 <%
     storage.add(person);
 %>
-
+<h1>用户注册成功，用户信息</h1>
 <p>Following person has been added to storage: </p>
 <p>First name: <%=person.getFirstName()%>
 </p>

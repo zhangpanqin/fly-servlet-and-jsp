@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X - UA - Compatible " content="ie = edge ">
-    <title>jsonp 跨域</title>
+    <title>jsonp 和 cors</title>
 </head>
 
 <body>
 <div>jsonp:<span id="jsonp"></span></div>
 <div>cors:<span id="cors"></span></div>
-<script src="../vendor/jquery-3.4.1.min.js"></script>
+<script src="jquery-3.6.3.min.js"></script>
 <script>
         $.ajax({
-            url: 'http://192.168.202.216:8888/web/demo2',
+            url: 'http://localhost:8888/mflyyou/web/jsonp',
             type: "GET",
             dataType: 'jsonp',
             error(error) {
@@ -25,7 +25,7 @@
             }
         });
         $.ajax({
-            url: 'http://192.168.202.216:8888/web/demo3',
+            url: 'http://localhost:8888/mflyyou/web/cors',
             dataType: 'json',
             type: "GET",
             error(error) {
