@@ -1,2 +1,10 @@
+pluginManagement {
+    plugins {
+        id "org.gretty" version "4.0.3"
+    }
+}
+
 rootProject.name = 'fly-servlet-and-jsp'
+include 'html'
+include 'application'
 

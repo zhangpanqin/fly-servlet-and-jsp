@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id "org.gretty"
+}
+
+dependencies {
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+    implementation group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.23'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+}
+
+gretty {
+    httpPort = 8888
+    servletContainer = 'jetty11'
+    contextPath = '/mflyyou'
+}
